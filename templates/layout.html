@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>{{title}}</title>
+    <link rel=stylesheet type=text/css href="{{url_for('static', filename='css/layout.css')}}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+  </head>
+  <body>
+	  <header>
+      <div class="header_name">
+        <a href="/">Reina's Room</a></li>
+      </div>
+  		<div class=select_page>
+        <ul>
+          <li><a href="/" class="btn_top">TOP</a></li>
+          <li><a href="/profile" class="btn_top">About ME</a></li>
+          <li><a href="/calculator" class="btn_top">Calculator</a></li>
+          <li><a href="/vocabulary" class="btn_top">Vocabulary</a></li>
+        </ul>
+  		</div>
+    </header>
+    <content>
+      <sidebar>
+        <ul class="sidebar">
+          <li><a href="/" class="btn_brown  btn_shadow">TOP</a></li>
+          <li><a href="/profile" class="btn_brown  btn_shadow">About ME</a></li>
+          <li><a href="/calculator" class="btn_brown btn_shadow">Accounting</a></li>
+          <li><a href="/vocabulary" class="btn_brown btn_shadow">Vocabulary</a></li>
+        </ul>
+      </sidebar>
+      <div class="toolbar">
+    {%block content%}
+    {%endblock%}
+      </div>
+    </content>
+  	<footer>
+  		<div class="contact_form">
+            <ul>
+                <li>tell:000-0000-0000</li>
+                <li>mail:xxx@gmail.com</li>
+            </ul>   
+  		</div>
+  	</footer> 
+  </body>
+</html>

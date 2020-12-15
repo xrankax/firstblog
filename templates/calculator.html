@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block content %}
+  	<div class="content">
+  		<div class="explanation">
+  			<p>
+  				下記のフォームにそれぞれの値を入れてください。
+  			</p>
+		  	<div class="calculator">
+		  	<form action="/calculator/" method="POST">
+		  		<label for="sales">売上高を入力してください</label><br>
+		  		<input type="text" name="num"><br>
+		  		<label for="gross_profit">売上総利益を入力してください</label><br>
+		  		<input type="text" name="num"><br>
+		  		<label for ="op_profit">営業利益を入力してください</label><br>
+		  		<input type="text" name="num"><br>
+		  		<label for ="b4tax">経常利益を入力してください</label><br>
+		  		<input type="text" name="num"><br>
+		  		<label for="net_income">当期純利益を入力してください</label><br>
+		  		<input type="text" name="num"><br>
+		  		<input type="submit" name="submit" value="送信">
+			  </form>
+			  {{numbers_name}} {{numbers}}
+		  	</div>
+  		</div>
+	 </div>
+{% endblock %}
