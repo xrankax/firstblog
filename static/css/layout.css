@@ -1,174 +1,209 @@
-header{
-	display: flex;
-	justify-content: space-between;
-	background-color: #E8DEBE;
-	width: 100vw;
+:root {
+  /* 　サイドバーの横幅を変数化 */
+  --sidebar-width: 200px;
 }
 
-body{
-	font-family: 'Lucida Console';
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #e8debe;
+  width: 100vw;
 }
 
-a { text-decoration: none;}
-a:hover { text-decoration: none;}
-.select_page ul li a{ 
-	color: black;
-	font-family: 'Cinzel Decorative', cursive; 
+body {
+  font-family: "Lucida Console";
+  margin: 0;
+  /* ブラウザ(chrome)はデフォルトでbodyやh1などに、余白をつけます
+  その余白を取り除きました */
 }
 
-.header_name a{
-	color: black;
-	font-size: 30px;
-	font-family: 'Cinzel Decorative', cursive;
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+.select_page ul li a {
+  color: black;
+  font-family: "Cinzel Decorative", cursive;
 }
 
-li{
-	list-style: none;
+.header_name a {
+  color: black;
+  font-size: 30px;
+  font-family: "Cinzel Decorative", cursive;
 }
 
-.header_name{
-	width: 250px;
-	display: flex;
-	align-items: center;
-	cursor: pointer;
-	margin-left: 5px;
+li {
+  list-style: none;
 }
 
-.select_page{
-	padding-right: 20px;
+.header_name {
+  width: 250px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 5px;
 }
 
-.select_page ul{
-	display: flex;
+.select_page {
+  padding-right: 20px;
 }
 
-.select_page ul li{
-	padding: 10px;
-	cursor: pointer;
-	font-weight: 500;
+.select_page ul {
+  display: flex;
 }
 
-content{
-	display: flex;
-	width: 100vw;
-	height: 100vh;
+.select_page ul li {
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 500;
 }
 
-sidebar{
-	width: 200px;
-	height: 100vh;
+content {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
 }
 
-.sidebar{
-	width: 200px;
-	height: 100vh;
-	display: flex;
-	flex-direction: column;
-	background-color: #3A3121;
-	margin: 0 auto;
-	padding-left: 10px;
+sidebar {
+  width: var(--sidebar-width);
+  height: 100vh; /* 100vh → 100%に変更(contentの高さの100%)。 */
 }
 
-.sidebar li{
-	padding-top: 80px;
-	cursor: pointer;
+.sidebar {
+  width: var(--sidebar-width); /* 　サイドバーの横幅を変数化 */
+  height: 100%; /* 100vh → 100%に変更(contentの高さの100%)。 */
+  display: flex;
+  flex-direction: column;
+  background-color: #3a3121;
+  margin: 0 auto;
+  padding-left: 10px;
+}
+
+.sidebar li {
+  padding-top: 80px;
+  cursor: pointer;
 }
 
 a.btn_brown {
-	padding: 20px 40px;
-	color: #3A3121;
-	background-color: #E8DEBE;
-	border-radius: 100vh;
-	text-align: center;
-  }
+  padding: 20px 40px;
+  color: #3a3121;
+  background-color: #e8debe;
+  border-radius: 100vh;
+  text-align: center;
+}
 
 a.btn_brown:hover {
-	margin-top: 3px;
-	padding: 19px 40px;
-	color: #3A3121;
-	background: #E8DEBE;
-	border-bottom: 3px solid #806f52;
-	border-radius: 100vh;
-	text-align: center;
-  }
+  margin-top: 3px;
+  padding: 19px 40px;
+  color: #3a3121;
+  background: #e8debe;
+  border-bottom: 3px solid #806f52;
+  border-radius: 100vh;
+  text-align: center;
+}
 a.btn_shadow {
-	-webkit-box-shadow: 0 3px 5px rgba(232, 222, 190, .3);
-	box-shadow: 3px 1px 5px rgba(232, 222, 190, .2);
-  }
+  -webkit-box-shadow: 0 3px 5px rgba(232, 222, 190, 0.3);
+  box-shadow: 3px 1px 5px rgba(232, 222, 190, 0.2);
+}
 
 a.btn_top {
-	position: relative;
-	display: inline-block;
-	text-decoration: none;
-  }
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
 a.btn_top::after {
-	position: absolute;
-	bottom: -4px;
-	left: 0;
-	content: '';
-	width: 100%;
-	height: 0.5px;
-	background: black;
-	transform: scale(0, 1);
-	transform-origin: center top;
-	transition: transform .3s;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 0.5px;
+  background: black;
+  transform: scale(0, 1);
+  transform-origin: center top;
+  transition: transform 0.3s;
 }
 a.btn_top:hover::after {
-	transform: scale(1, 1);
+  transform: scale(1, 1);
 }
 
-footer{
-	display: flex;
-	background: #E8DEBE;
-	width: 100vw;
-	height: 100px;
-	margin: 0px;
-	bottom: 0; 
+footer {
+  display: flex;
+  background: #e8debe;
+  width: 100vw;
+  height: 100px;
+  margin: 0px;
+  bottom: 0;
 }
 
-.top_image{
-	background-image: url("thought-catalog-505eectW54k-unsplash.jpg");
-	width: 100vw;
-	height: 80vh;
-	background-size: 750px;
+.toolbar {
+  height: 100vh;
+  width: 100%; /* 100vw → 100%としました */
 }
 
-h1{
-	text-align: center;
-	background-color: skyblue;
-	margin: 0px;
-	padding: 50px;
-	font-size: 50px;
+.top_image {
+  /* flaskでは、画像はstaticフォルダ以下に保存するのが基本のようです */
+  /* パスを変更 */
+  background-image: url("/static/images/thought-catalog-505eectW54k-unsplash.jpg");
+
+  background-repeat: no-repeat; /* 繰り返しを阻止。試しにno-repeatをrepeatに変えてください*/
+  background-size: cover; /* 全体に表示されるようにする。試しにcoverをcontainに変えてください */
+
+  width: 100%;
+  height: 80%;
+  /* background-size: 750px; */
 }
 
-.calculator{
-	background: rgba(164,211,237,0.5);
-	width: 260px;
-	height: 260px;
-	padding: 20px 30px;
-	margin: 30px 15px;
+.recent_post {
+  height: 20%;
+  background-color: magenta;
 }
 
-.caluculator p{
-	margin: 10px;
+h1 {
+  text-align: center;
+  /* ↓ 分かりにくいので、いったんコメントアウトしておきました ↓ */
+  /* background-color: skyblue; */
+  margin: 0px;
+
+  /* ↓ 大きすぎるpaddingやfont-sizeも、Recent Postがはみ出す一因です。
+  試しにコメントアウトを外してみてください */
+
+  /* padding: 50px; */
+  /* font-size: 50px; */
+}
+
+.calculator {
+  background: rgba(164, 211, 237, 0.5);
+  width: 260px;
+  height: 260px;
+  padding: 20px 30px;
+  margin: 30px 15px;
+}
+
+.caluculator p {
+  margin: 10px;
 }
 
 @media screen and (max-width: 960px) {
-	sidebar {
-	  display: none;
-	}
-	.select_page{
-		display: none;
-	}
-	.header_name{
-		padding: 18px 0;
-	}
+  sidebar {
+    display: none;
   }
-  
+  .select_page {
+    display: none;
+  }
+  .header_name {
+    padding: 18px 0;
+  }
+}
+
 @media screen and (min-width: 960px) {
-	.toolbar{
-	padding-left: 10px;
-	height: 100vh;
-	width: 100vw;
-	}
+  .toolbar {
+    padding-left: 10px;
+    height: 100vh; /* 宮岡さんは、ここを100vwとしていました。 */
+    width: calc(
+      100% - var(--sidebar-width)
+    ); /* contentの横幅 - sidebarの横幅 */
+  }
 }
